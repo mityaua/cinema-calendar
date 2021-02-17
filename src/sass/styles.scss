@@ -1,0 +1,174 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  line-height: 1.5;
+
+  background-color: #e9f8f9;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Общий тайтл */
+.title {
+  color: #395050;
+
+  text-align: center;
+}
+
+.current-date {
+  text-align: center;
+}
+
+/* Список фильмов */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 20px 0;
+  margin: 0;
+
+  margin-left: -15px;
+  margin-top: -15px;
+
+  list-style: none;
+}
+
+/* Элемент списка */
+.movie-list__item {
+  flex-basis: calc(100% / 1 - 15px);
+
+  margin-left: 15px;
+  margin-top: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 3 - 15px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 15px);
+  }
+}
+
+/* Карточка фильма */
+.card {
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  overflow: hidden;
+}
+
+// Ссылка на обложке
+.card-thumb {
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+// Обложка фильма
+.card-img {
+  width: 100%;
+}
+
+/* Текстовки карточки */
+.card-content {
+  padding: 15px;
+
+  background-color: #ffffff;
+}
+
+/* Название фильма */
+.card-title {
+  margin-bottom: 10px;
+
+  color: #395050;
+
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Оригинальное название фильма */
+.card-original-title {
+  margin-bottom: 10px;
+
+  color: #505050;
+
+  text-align: center;
+}
+
+/* Список с данными по фильму */
+.card-list {
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 10px;
+
+  list-style: none;
+}
+
+.card-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.card-description {
+  margin-bottom: 10px;
+}
+
+.card-btn {
+  display: block;
+
+  width: 60%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+
+  color: #ffffff;
+  background-color: #2681d0;
+
+  text-align: center;
+  text-decoration: none;
+
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,29 @@
+{{#each this}}
+<li class="movie-list__item">
+    <article class="card">
+        <a href="https://www.youtube.com/results?search_query=трейлер+{{title}}" class="card-link" target="_blank">
+            <div class="card-thumb">
+                <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" loading="lazy" class="card-img" alt="{{title}}"
+                    title="{{title}}" />
+            </div>
+        </a>
+        <div class="card-content">
+            <h2 class="card-title">{{title}}</h2>
+            <p class="card-original-title">{{original_title}}</p>
+            <ul class="card-list">
+                <li class="card-list-item">
+                    <p>📆 <b>Дата прем'єри: </b>{{release_date}}</p>
+                </li>
+                <li class="card-list-item">
+                    <p>👨‍👨‍👦 <b>Рейтинг: </b>({{vote_average}})</p>
+                </li>
+                <li class="card-list-item">
+                    <p>📈 <b>Індекс популярності: </b>{{popularity}}</p>
+                </li>
+                <p class="card-description">{{overview}}</p>
+                <a href="https://www.youtube.com/results?search_query=трейлер+{{title}}" class="card-btn" target="_blank">Трейлер</a>
+            </ul>
+        </div>
+    </article>
+</li>
+{{/each}}
