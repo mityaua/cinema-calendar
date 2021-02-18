@@ -5,42 +5,82 @@ const Theme = {
 };
 
 // Переключатель тем в DOM
-const input = document.querySelector('#theme-switch-toggle');
+const inputRef = document.querySelector('#theme-switch-toggle');
 
-// Слушатель событий на инпуте + коолбек функция для смены темы
-input.addEventListener('change', changeTheme);
+// Слушатель события на инпуте
+inputRef.addEventListener('change', changeInput);
 
-// Вызов функций для темы по умолчанию + проверка на темную тему
-setDefaultTheme();
-darkThemeCheck();
+// Проверка переключателя
+function changeInput(event) {
+  event.currentTarget.checked ? checkedInput() : notCheckedInput();
+}
 
-// Функция для темы по умолчанию
-function setDefaultTheme() {
+// Установка темной темы
+function checkedInput() {
+  document.body.classList.add(Theme.DARK);
+  document.body.classList.remove(Theme.LIGHT);
+  localStorage.setItem('theme', Theme.DARK);
+  inputRef.checked = true;
+}
+
+// Установка светлой темы
+function notCheckedInput() {
   document.body.classList.add(Theme.LIGHT);
+  document.body.classList.remove(Theme.DARK);
+  localStorage.setItem('theme', Theme.LIGHT);
+  inputRef.checked = false;
+}
 
+// Тема по умолчанию
+function currentTheme() {
   const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === Theme.LIGHT || savedTheme === null) {
+    notCheckedInput();
+    return;
+  }
 
-  if (savedTheme) {
-    const parsedTheme = JSON.parse(savedTheme);
-    document.body.classList.add(parsedTheme);
+  if (savedTheme === Theme.DARK) {
+    checkedInput();
+    return;
   }
 }
 
-// Функция для смены темы
-function changeTheme(event) {
-  if (event.target.checked) {
-    document.body.classList.replace(Theme.LIGHT, Theme.DARK);
-    localStorage.setItem('theme', JSON.stringify(Theme.DARK));
-  } else {
-    document.body.classList.replace(Theme.DARK, Theme.LIGHT);
-    localStorage.setItem('theme', JSON.stringify(Theme.LIGHT));
-  }
-}
+currentTheme();
 
-// Функция для проверки на темную тему
-function darkThemeCheck() {
-  if (document.body.classList.contains(Theme.DARK)) {
-    input.checked = true;
-    document.body.classList.remove(Theme.LIGHT);
-  }
-}
+// // Слушатель событий на инпуте + коолбек функция для смены темы
+// input.addEventListener('change', changeTheme);
+
+// // Вызов функций для темы по умолчанию + проверка на темную тему
+// setDefaultTheme();
+// darkThemeCheck();
+
+// // Функция для темы по умолчанию
+// function setDefaultTheme() {
+//   document.body.classList.add(Theme.LIGHT);
+
+//   const savedTheme = localStorage.getItem('theme');
+
+//   if (savedTheme) {
+//     const parsedTheme = JSON.parse(savedTheme);
+//     document.body.classList.add(parsedTheme);
+//   }
+// }
+
+// // Функция для смены темы
+// function changeTheme(event) {
+//   if (event.target.checked) {
+//     document.body.classList.replace(Theme.LIGHT, Theme.DARK);
+//     localStorage.setItem('theme', JSON.stringify(Theme.DARK));
+//   } else {
+//     document.body.classList.replace(Theme.DARK, Theme.LIGHT);
+//     localStorage.setItem('theme', JSON.stringify(Theme.LIGHT));
+//   }
+// }
+
+// // Функция для проверки на темную тему
+// function darkThemeCheck() {
+//   if (document.body.classList.contains(Theme.DARK)) {
+//     input.checked = true;
+//     document.body.classList.remove(Theme.LIGHT);
+//   }
+// }
