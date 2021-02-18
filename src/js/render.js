@@ -1,5 +1,6 @@
 import movieTpl from '../templates/movie.hbs';
 import fetchMovies from './api';
+import animateEmojis from './emojis';
 import moment from 'moment';
 moment.locale('uk');
 
@@ -14,6 +15,8 @@ async function fetchAll() {
 
     const markup = movieTpl(movies);
     listRef.insertAdjacentHTML('beforeend', markup);
+
+    animateEmojis();
   } catch (error) {
     console.log('Smth wrong with request');
   }
