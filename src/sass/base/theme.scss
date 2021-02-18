@@ -6,6 +6,23 @@ body.light-theme {
 body.dark-theme {
   background-color: #333333;
   color: #f5deb3;
+
+  & .card-title {
+    color: #f5deb3;
+  }
+
+  & .card-original-title {
+    color: #f5deb3;
+  }
+
+  & .card-content {
+    background-color: #232221;
+    color: #f5deb3;
+  }
+
+  & .emojis {
+    background-color: transparent;
+  }
 }
 
 /* THEME SWITCH */
@@ -14,7 +31,7 @@ body.dark-theme {
   justify-content: flex-end;
   align-items: center;
 
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .theme-switch__icon {

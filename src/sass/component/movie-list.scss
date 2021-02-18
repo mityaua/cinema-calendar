@@ -27,8 +27,12 @@
     flex-basis: calc(100% / 3 - 15px);
   }
 
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) and (max-width: 1919px) {
     flex-basis: calc(100% / 4 - 15px);
+  }
+
+  @media screen and (min-width: 1920px) {
+    flex-basis: calc(100% / 5 - 15px);
   }
 }
 
@@ -109,7 +113,7 @@
   padding: 0.5rem;
 
   border: 1px solid #808080;
-  border-radius: 0.2rem;
+  border-radius: 1.2rem;
 }
 
 .card-details > .card-summary {
@@ -150,7 +154,7 @@
   width: 60%;
   margin: 0 auto;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1rem;
 
   color: #ffffff;
   background-color: #2681d0;
