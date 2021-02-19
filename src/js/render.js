@@ -17,9 +17,9 @@ async function fetchAll() {
 
     listRef.insertAdjacentHTML('beforeend', markup);
 
-    animateEmojis();
-
     infinityLoad(fetchAll);
+    
+    animateEmojis();
   } catch (error) {
     console.log('Smth wrong with request');
   }
