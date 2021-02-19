@@ -1,20 +1,34 @@
 import { AvatarGenerator } from 'random-avatar-generator';
 import { headerLogoRef } from '../references/refs';
+import moment from 'moment';
 
-headerLogoRef.addEventListener('click', logoGenerator);
+const everyDayLogo = moment().format('L');
 
-function logoGenerator() {
+headerLogoRef.addEventListener('click', randomLogo);
+
+function createLogo(img) {
   headerLogoRef.innerHTML = '';
-  const generator = new AvatarGenerator();
-
-  const avatar = generator.generateRandomAvatar('');
 
   headerLogoRef.insertAdjacentHTML(
     'beforeend',
     `<a href="#">
-    <img src="${avatar}" alt="Який ти сьгодні" title="Який ти сьгодні?" loading="lazy" width=50>
+    <img src="${img}" alt="Який ти сьгодні" title="Хто ти сьгодні?" loading="lazy" width=50>
       </a>`,
   );
 }
 
-logoGenerator();
+function randomLogo() {
+  const generator = new AvatarGenerator();
+  const avatar = generator.generateRandomAvatar('');
+
+  createLogo(avatar);
+}
+
+function defaultLogo() {
+  const generator = new AvatarGenerator();
+  const avatar = generator.generateRandomAvatar(everyDayLogo);
+
+  createLogo(avatar);
+}
+
+defaultLogo();
