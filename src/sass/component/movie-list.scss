@@ -38,9 +38,13 @@
 
 /* Карточка фильма */
 .card {
+  min-height: 100%;
+
   border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  background-color: #ffffff;
 
   overflow: hidden;
 }
@@ -61,16 +65,15 @@
 .card-img {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
-    height: 30rem;
-  }
+  // @media screen and (min-width: 768px) {
+  //   height: 30rem;
+  // }
 }
 
 /* Текстовки карточки */
 .card-content {
   padding: 15px;
 
-  background-color: #ffffff;
   color: #395050;
 }
 

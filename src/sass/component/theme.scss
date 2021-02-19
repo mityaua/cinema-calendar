@@ -7,6 +7,10 @@ body.dark-theme {
   background-color: #333333;
   color: #f5deb3;
 
+  & .card {
+    background-color: #232221;
+  }
+
   & .card-title {
     color: #f5deb3;
   }
@@ -16,7 +20,6 @@ body.dark-theme {
   }
 
   & .card-content {
-    background-color: #232221;
     color: #f5deb3;
   }
 
