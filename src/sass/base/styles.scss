@@ -36,6 +36,19 @@ p {
   padding-right: 15px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px 0;
+}
+
+.logo {
+  height: 40px;
+
+  padding: 5px 0;
+}
+
 /* Общий тайтл */
 .title {
   text-align: center;

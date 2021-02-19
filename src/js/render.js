@@ -1,22 +1,25 @@
+import { listRef, dateRef } from './references/refs';
+import api from './api/api';
 import movieTpl from '../templates/movie.hbs';
-import fetchMovies from './api';
-import animateEmojis from './emojis';
+import infinityLoad from './components/io';
+import animateEmojis from './components/emojis';
 import moment from 'moment';
-moment.locale('uk');
 
-const listRef = document.querySelector('#js-list');
-const dateRef = document.querySelector('.current-date');
-
-dateRef.textContent = `афіша від ${moment().format('LLL')}`;
+dateRef.textContent = `оновлено ${moment()
+  .locale('uk')
+  .calendar()
+  .toLowerCase()}`;
 
 async function fetchAll() {
   try {
-    const movies = await fetchMovies();
-
+    const movies = await api.fetchMovies();
     const markup = movieTpl(movies);
+
     listRef.insertAdjacentHTML('beforeend', markup);
 
     animateEmojis();
+
+    infinityLoad(fetchAll);
   } catch (error) {
     console.log('Smth wrong with request');
   }

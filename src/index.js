@@ -1,7 +1,7 @@
 import './sass/main.scss';
 
-import './js/theme';
-import './js/api';
+import './js/api/api';
 import './js/render';
-import './js/back-to-top';
-// import './js/modal'
+import './js/components/theme';
+import './js/components/avatar';
+import './js/components/back-to-top';

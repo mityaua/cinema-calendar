@@ -1,11 +1,10 @@
+import { inputRef } from '../references/refs';
+
 // Обьект тем
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
-
-// Переключатель тем в DOM
-const inputRef = document.querySelector('#theme-switch-toggle');
 
 // Слушатель события на инпуте
 inputRef.addEventListener('change', changeInput);
