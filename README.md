@@ -1,4 +1,4 @@
-# Що нового у кінотеатрах?
+# Що нового у кінотеатрі?
 
 [<img src="https://i.ibb.co/r3fDcTB/346437.png">](https://mityaua.github.io/cinema-calendar/)
 
