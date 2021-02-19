@@ -17,8 +17,10 @@ async function fetchAll() {
 
     listRef.insertAdjacentHTML('beforeend', markup);
 
-    infinityLoad(fetchAll);
-    
+    if (movies.length > 0) {
+      infinityLoad(fetchAll);
+    }
+
     animateEmojis();
   } catch (error) {
     console.log('Smth wrong with request');
