@@ -1,17 +1,17 @@
 # Що нового у кінотеатрах?
 
-![Що нового у кінотеатрах?](https://i.ibb.co/NxmGPzm/Screenshot.png)
+[<img src="https://i.ibb.co/r3fDcTB/346437.png">](https://mityaua.github.io/cinema-calendar/)
 
 [Переглянути сайт](https://mityaua.github.io/cinema-calendar/)
 
 ## Опис  
 
--  **Modern features brought to IRC.** Push notifications, link previews, new message markers, and more bring IRC to the 21st century.
+-  **Актуальний розклад кіноновинок України.** Афіша оновлюється щотижня, щодня, щогодини!.
 
--  **Always connected.** Remains connected to IRC servers while you are offline.
+-  **Темна тема** Збереже ваші очі вночі.
 
--  **Cross platform.** It doesn't matter what OS you use, it just works wherever Node.js runs.
+-  **Крути, поки крутиться** Інформація завантажується при прокрутці сторінки. А навіщо тиснути ті кнопки?
 
--  **Responsive interface.** The client works smoothly on every desktop, smartphone and tablet.
+-  **Все локалізовано** Так, україською, так солов'їною.
 
--  **Synchronized experience.** Always resume where you left off no matter what device.
+-  **Гаряче, тепле, зовсім прохолодне** Всі новинки прокату зверху. А далі таке собі, не дуже свіже.
