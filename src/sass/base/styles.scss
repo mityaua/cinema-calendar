@@ -36,16 +36,13 @@ p {
   padding-right: 15px;
 }
 
+// Хедер
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  padding: 5px 0;
-}
-
-.logo {
-  height: 40px;
-
+  height: 70px;
   padding: 5px 0;
 }
 
@@ -54,6 +51,7 @@ p {
   text-align: center;
 }
 
+// Дата под общим тайтлом
 .current-date {
   text-align: center;
 }
