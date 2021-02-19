@@ -12,7 +12,7 @@ function createLogo(img) {
   headerLogoRef.insertAdjacentHTML(
     'beforeend',
     `<a href="#">
-    <img src="${img}" alt="Який ти сьгодні" title="Хто ти сьгодні?" loading="lazy" width=50>
+    <img src="${img}" alt="Твій аватар на сьогодні" title="Твій аватар на сьогодні" loading="lazy" width="50">
       </a>`,
   );
 }

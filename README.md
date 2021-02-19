@@ -1,6 +1,6 @@
 # Що нового у кінотеатрі?
 
-[<img src="https://i.ibb.co/r3fDcTB/346437.png">](https://mityaua.github.io/cinema-calendar/)
+[<img src="https://i.ibb.co/r3fDcTB/346437.png" width=100%>](https://mityaua.github.io/cinema-calendar/)
 
 [Відкрити сайт](https://mityaua.github.io/cinema-calendar/)
 
