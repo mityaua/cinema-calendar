@@ -7,7 +7,7 @@ listRef.addEventListener('click', openModal);
 
 // Open lightbox
 function openModal(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   if (event.target.nodeName !== 'IMG') {
     return;
