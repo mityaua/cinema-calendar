@@ -58,7 +58,9 @@
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6",
     "moment": "^2.29.1",
+    "nprogress": "^0.2.0",
     "random-avatar-generator": "^2.0.0",
+    "store": "^2.0.12",
     "toastr": "^2.1.4",
     "vanilla-back-to-top": "^7.2.1"
   }

@@ -1,3 +1,4 @@
+import store from 'store';
 import { inputRef } from '../references/refs';
 
 // Обьект тем
@@ -18,7 +19,7 @@ function changeInput(event) {
 function checkedInput() {
   document.body.classList.add(Theme.DARK);
   document.body.classList.remove(Theme.LIGHT);
-  localStorage.setItem('theme', Theme.DARK);
+  store.set('theme', Theme.DARK);
   inputRef.checked = true;
 }
 
@@ -26,14 +27,14 @@ function checkedInput() {
 function notCheckedInput() {
   document.body.classList.add(Theme.LIGHT);
   document.body.classList.remove(Theme.DARK);
-  localStorage.setItem('theme', Theme.LIGHT);
+  store.set('theme', Theme.LIGHT);
   inputRef.checked = false;
 }
 
 // Тема по умолчанию
 function currentTheme() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === Theme.LIGHT || savedTheme === null) {
+  const savedTheme = store.get('theme');
+  if (savedTheme === Theme.LIGHT || !savedTheme) {
     notCheckedInput();
     return;
   }

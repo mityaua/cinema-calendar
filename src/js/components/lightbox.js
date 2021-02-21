@@ -19,7 +19,7 @@ function openModal(event) {
   instance.show();
   window.addEventListener('keydown', closeModal);
 
-  // Close lightbox
+  // Close lightbox by Escaoe
   function closeModal(event) {
     if (event.code === 'Escape') {
       instance.close();
