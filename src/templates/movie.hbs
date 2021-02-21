@@ -1,8 +1,9 @@
 {{#each this}}
-<li class="movie-list__item">
+<li class="movie-list-item">
     <article class="card">
         <div class="card-thumb">
-            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" loading="lazy" class="card-img" alt="{{title}} | {{original_title}}" title="{{title}}" />
+            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" loading="lazy" class="card-img" alt="{{title}} | {{original_title}}"
+                title="{{title}}" />
         </div>
         <div class="card-content">
             <h2 class="card-title">{{title}}</h2>
@@ -17,19 +18,20 @@
                 <li class="card-list-item">
                     <p>📈 <b>Індекс популярності: </b>{{popularity}}</p>
                 </li>
-                <div class="emojis">
-                    <div class="emoji">👍</div>
-                    <div class="emoji">❤</div>
-                    <div class="emoji">😐</div>
-                    <div class="emoji">😣</div>
-                    <div class="emoji">👎</div>
-                </div>
-                <details class="card-details">
-                    <summary class="card-summary">Опис фільму</summary>
-                    <p class="card-description">{{overview}}</p>
-                </details>
-                <a href="https://www.youtube.com/results?search_query=трейлер+{{title}}" class="card-btn" target="_blank" title="Переглянути трейлер" aria-label="Переглянути трейлер" >Трейлер</a>
             </ul>
+            <div class="emojis">
+                <div class="emoji">👍</div>
+                <div class="emoji">❤</div>
+                <div class="emoji">😐</div>
+                <div class="emoji">😣</div>
+                <div class="emoji">👎</div>
+            </div>
+            <details class="card-details">
+                <summary class="card-summary">Опис фільму</summary>
+                <p class="card-description">{{overview}}</p>
+            </details>
+            <a href="https://www.youtube.com/results?search_query=трейлер+{{title}}" class="card-btn" rel="noopener noreferrer"
+                target="_blank" title="Переглянути трейлер" aria-label="Переглянути трейлер">Трейлер</a>
         </div>
     </article>
 </li>

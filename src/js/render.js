@@ -31,6 +31,10 @@ async function fetchAll() {
     animateEmojis();
   } catch (error) {
     console.log('Smth wrong with request');
+    listRef.insertAdjacentHTML(
+      'beforebegin',
+      '<p class="error-msg">На наш сервер напали єноти. Зачекайте деякий час, поки ми їх виженемо ⏳</p>',
+    );
   }
 }
 
