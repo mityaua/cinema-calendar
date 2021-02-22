@@ -1,8 +1,8 @@
 import moment from 'moment';
 import axios from 'axios';
 
-const START_DAY = moment().subtract(30, 'days').format('Y-MM-D');
-const WEEK_LATER = moment().add(7, 'days').format('Y-MM-D');
+const START_DAY = moment().subtract(30, 'days').format('Y-MM-DD');
+const WEEK_LATER = moment().add(7, 'days').format('Y-MM-DD');
 const URL = 'https://api.themoviedb.org/3/discover/movie';
 const API_KEY = '249f222afb1002186f4d88b2b5418b55';
 
