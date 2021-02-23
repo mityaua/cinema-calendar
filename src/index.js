@@ -1,4 +1,5 @@
 import './sass/main.scss';
+import 'animate.css';
 
 import './js/api/api';
 import './js/render';
