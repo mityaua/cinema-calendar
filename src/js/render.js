@@ -1,6 +1,6 @@
 import { listRef, dateRef } from './references/refs';
 import api from './api/api';
-import * as NProgress from 'nprogress';
+import NProgress from 'nprogress';
 import movieTpl from '../templates/movie.hbs';
 import infinityLoad from './components/io';
 import animateEmojis from './components/emojis';

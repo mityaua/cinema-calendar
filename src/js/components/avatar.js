@@ -1,6 +1,7 @@
 import { AvatarGenerator } from 'random-avatar-generator';
 import { headerLogoRef } from '../references/refs';
 import moment from 'moment';
+import { animateCSS } from './animate';
 
 const everyDayLogo = moment().format('L');
 
@@ -15,6 +16,8 @@ function createLogo(img) {
     <img src="${img}" alt="Твій аватар на сьогодні" title="Твій аватар на сьогодні" loading="lazy" width="50">
       </a>`,
   );
+
+  animateCSS('.logo', 'flip');
 }
 
 function randomLogo() {
