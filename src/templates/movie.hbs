@@ -2,8 +2,12 @@
 <li class="movie-list-item">
     <article class="card">
         <div class="card-thumb">
+            {{#if poster_path}}
             <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" loading="lazy" class="card-img" alt="{{title}} | {{original_title}}"
                 title="{{title}}" />
+            {{else}}
+            <img src="https://subscribenow.com.au/time/asia/Solo/Content/Images/noCover.gif" loading="lazy" class="card-img" alt="Постер буде згодом" title="Постер буде згодом" />
+            {{/if}}
         </div>
         <div class="card-content">
             <h2 class="card-title">{{title}}</h2>
@@ -28,7 +32,11 @@
             </div>
             <details class="card-details">
                 <summary class="card-summary">Опис фільму</summary>
+                {{#if overview}}
                 <p class="card-description">{{overview}}</p>
+                {{else}}
+                <p class="card-description">Опис цього фільма на даний момент відсутній.</p>
+                {{/if}}
             </details>
             <a href="https://www.youtube.com/results?search_query=трейлер+{{title}}" class="card-btn" rel="noopener noreferrer"
                 target="_blank" title="Переглянути трейлер" aria-label="Переглянути трейлер">Трейлер</a>
