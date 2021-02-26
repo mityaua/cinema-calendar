@@ -60,6 +60,7 @@
     "handlebars": "^4.7.6",
     "moment": "^2.29.1",
     "nprogress": "^0.2.0",
+    "pikaday": "^1.8.2",
     "random-avatar-generator": "^2.0.0",
     "store": "^2.0.12",
     "toastr": "^2.1.4",
