@@ -24,7 +24,7 @@ p {
   margin: 0;
 }
 
-/* Контейнер */
+/* Container */
 .container {
   width: 100%;
 
@@ -34,16 +34,17 @@ p {
   padding-right: 15px;
 }
 
-/* Общий тайтл */
+/* Main title */
 .title {
   text-align: center;
 }
 
-// Дата под общим тайтлом
+// Date under main title
 .current-date {
   text-align: center;
 }
 
+// Error message under date
 .error-msg {
   text-align: center;
 }
