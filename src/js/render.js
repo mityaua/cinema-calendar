@@ -1,12 +1,15 @@
-import { listRef, dateRef } from './references/refs';
 import api from './api/api';
-import NProgress from 'nprogress';
 import movieTpl from '../templates/movie.hbs';
 import infinityLoad from './components/io';
+
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
 import animateEmojis from './components/emojis';
+
 import moment from 'moment';
 
-import 'nprogress/nprogress.css';
+import { listRef, dateRef } from './references/refs';
 
 dateRef.textContent = `оновлено ${moment()
   .locale('uk')

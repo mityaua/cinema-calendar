@@ -1,9 +1,15 @@
 import { AvatarGenerator } from 'random-avatar-generator';
-import { headerLogoRef } from '../references/refs';
+
 import moment from 'moment';
+
 import { animateCSS } from './animate';
 
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
 const everyDayLogo = moment().format('L');
+
+import { headerLogoRef } from '../references/refs';
 
 headerLogoRef.addEventListener('click', randomLogo);
 
@@ -21,10 +27,14 @@ function createLogo(img) {
 }
 
 function randomLogo() {
+  NProgress.start();
+
   const generator = new AvatarGenerator();
   const avatar = generator.generateRandomAvatar('');
 
   createLogo(avatar);
+
+  NProgress.done();
 }
 
 function defaultLogo() {

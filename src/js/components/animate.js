@@ -1,3 +1,4 @@
+// Компонент для анимирования элемента
 const animateCSS = (element, animation, prefix = 'animate__') =>
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
@@ -14,4 +15,4 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     node.addEventListener('animationend', handleAnimationEnd, { once: true });
   });
 
-  export { animateCSS };
+export { animateCSS };
