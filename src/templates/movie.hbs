@@ -3,10 +3,11 @@
     <article class="card">
         <div class="card-thumb">
             {{#if poster_path}}
-            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" loading="lazy" class="card-img" alt="{{title}} | {{original_title}}"
+            <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" onerror="this.onerror=null;this.src='https://subscribenow.com.au/time/asia/Solo/Content/Images/noCover.gif'"; loading="lazy" class="card-img" alt="{{title}} | {{original_title}}"
                 title="{{title}}" />
             {{else}}
-            <img src="https://subscribenow.com.au/time/asia/Solo/Content/Images/noCover.gif" loading="lazy" class="card-img" alt="Постер буде згодом" title="Постер буде згодом" />
+            <img src="https://subscribenow.com.au/time/asia/Solo/Content/Images/noCover.gif" loading="lazy" class="card-img"
+                alt="Постер буде згодом" title="Постер буде згодом" />
             {{/if}}
         </div>
         <div class="card-content">
