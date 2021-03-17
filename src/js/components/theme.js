@@ -3,8 +3,8 @@ import { inputRef } from '../references/refs';
 
 // Обьект тем
 const Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme',
+  LIGHT: 'day-theme',
+  DARK: 'night-theme',
 };
 
 // Слушатель события на инпуте
@@ -19,7 +19,7 @@ function changeInput(event) {
 function checkedInput() {
   document.body.classList.add(Theme.DARK);
   document.body.classList.remove(Theme.LIGHT);
-  store.set('theme', Theme.DARK);
+  store.set('site-theme', Theme.DARK);
   inputRef.checked = true;
 }
 
@@ -27,13 +27,13 @@ function checkedInput() {
 function notCheckedInput() {
   document.body.classList.add(Theme.LIGHT);
   document.body.classList.remove(Theme.DARK);
-  store.set('theme', Theme.LIGHT);
+  store.set('site-theme', Theme.LIGHT);
   inputRef.checked = false;
 }
 
 // Тема по умолчанию
 function currentTheme() {
-  const savedTheme = store.get('theme');
+  const savedTheme = store.get('site-theme');
   if (savedTheme === Theme.LIGHT || !savedTheme) {
     notCheckedInput();
     return;
