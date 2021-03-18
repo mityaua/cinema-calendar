@@ -14,6 +14,8 @@ import { headerLogoRef } from '../references/refs';
 headerLogoRef.addEventListener('click', randomLogo);
 
 function createLogo(img) {
+  NProgress.start();
+
   headerLogoRef.innerHTML = '';
 
   headerLogoRef.insertAdjacentHTML(
@@ -24,17 +26,15 @@ function createLogo(img) {
   );
 
   animateCSS('.logo', 'flip');
+
+  NProgress.done();
 }
 
 function randomLogo() {
-  NProgress.start();
-
   const generator = new AvatarGenerator();
   const avatar = generator.generateRandomAvatar('');
 
   createLogo(avatar);
-
-  NProgress.done();
 }
 
 function defaultLogo() {
