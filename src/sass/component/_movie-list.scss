@@ -19,7 +19,7 @@
   margin-left: 15px;
   margin-top: 15px;
 
-  @media screen and (min-width: 768px) and (max-width: 899px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-basis: calc(100% / 2 - 15px);
   }
 
@@ -51,10 +51,10 @@
 
 // Ссылка на обложке
 .card-thumb {
+  height: 400px;
+
   opacity: 1;
-
   transition: opacity $transition-duration $timing-function;
-
   cursor: pointer;
 
   &:hover,
@@ -66,10 +66,9 @@
 // Обложка фильма
 .card-img {
   width: 100%;
-
-  // @media screen and (min-width: 768px) {
-  //   height: 30rem;
-  // }
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* Текстовки карточки */
